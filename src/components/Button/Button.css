@@ -1,6 +1,13 @@
 .button {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Добавляем анимацию для плавного перехода */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.button:active {
+  transform: scale(0.9); /* Уменьшаем размер кнопки при нажатии */
 }

@@ -1,17 +1,21 @@
 import React from 'react';
 import './Button.css';
-import buttonImage from './buttonImage.png'; // Путь к изображению
+import buttonImage from './buttonImage.png'; // Путь к изображению кнопки
 
 const Button = ({ onClick }) => {
-    const handleClick = () => {
-        onClick();
-    };
+  const handleMouseDown = () => {
+    onClick();
+  };
 
-    return (
-        <div className="button" onClick={handleClick}>
-            <img src={buttonImage} alt="Button" />
-        </div>
-    );
+  const handleMouseUp = () => {
+    // Дополнительная логика при отпускании кнопки, если необходимо
+  };
+
+  return (
+    <div className="button" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
+      <img src={buttonImage} alt="Button" />
+    </div>
+  );
 };
 
 export default Button;
